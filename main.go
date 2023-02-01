@@ -1,29 +1,46 @@
 package main
 
-import "fmt"
+import  "fmt"
 
-func main() {
-	fmt.Println("hello world")
-	//array
-	a := []int{1, 4}
-	a1 := a[0]
-	a2 := a[1]
-	a[0] = 6
-	a[1] = 7 //way of adding a valu to an slice not in array
+var (
+	player1 = "1"
+	player2 = "2"
+	emptySpace = "0"
+)
+var board [3] [3] int
 
-	a = append(a, 8)  //way of adding a valu to an slice not in array
-	a = append(a, 9)  //way of adding a valu to an slice not in array
-	a = append(a, 10) //way of adding a valu to an slice not in array
-	a = append(a, 11) //way of adding a valu to an slice not in array
-
-	fmt.Printf("type %T value %v\n", a, a)
-	fmt.Printf("type %T value %v\n", a1, a1)
-	fmt.Printf("type %T value %v\n", a2, a2)
-	//fmt.Printf("ba--type %T value %v\n", ba, ba)
-
-	//loop through array
-	for index, value := range a {
-		fmt.Println(index, value)
-
+//newboard    create a new board
+func newboard ( 
+		for i := 0; i<3 ; i++ {
+		for j :=0; j<3; j++{
+			board [i] [j] =emptyspace
+		}
 	}
+)
+
+//print board - prints the board
+
+func printboard () {
+	for i :=0; i<3; i++{
+		for j :=0; j<3; j++{
+			fmt.Printf(board[i][j])
+			if j <2{
+				fmt.Printf(" | ")
+			}
+
+			if board [i][j]--2{
+				fmt.Printf("x |")
+			}elase if board [i] [j] ==1 {
+				fmt.Printf( "0 |")
+			} else {
+				fmt.Printf( " |")
+			}
+		} 
+		fmt.Println()
+		fmt.Println("-------------")
+	}
+
+
 }
+
+funt
